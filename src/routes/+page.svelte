@@ -27,7 +27,7 @@
     /**
      * @param {{detail: string;}} event
      */
-    function handleRequest(event) {
+    async function handleRequest(event) {
         const index = Number(event.detail)
         
         loadings[index] = true;
@@ -41,7 +41,19 @@
         loadings.push(false);
         executeds.push(false);
 
-        callGPTStream(system_prompt, user_prompt);
+        if(system_prompt){
+            await callGPTStream(system_prompt, user_prompt);
+        }else{
+            loadings[count-2] = false;
+            executeds[count-2] = true;
+
+            //0.1秒待機する
+            await new Promise(resolve => setTimeout(() => {
+                resolve(null);
+            }, 100));
+
+            scrolltoSide();
+        }
     }
 
     /**
