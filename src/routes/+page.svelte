@@ -275,7 +275,7 @@
     margin :0px;
     margin-left: 10px;
     height :calc(100vh - 20px);
-    min-width: calc(100% -10px);
+    min-width: calc(100% - 10px);
 }
 
 .header {
