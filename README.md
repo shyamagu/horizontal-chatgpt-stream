@@ -1,6 +1,7 @@
 # Horizontal ChatGPT Stream
 
 **Stream version of [Horizontal ChatGPT](https://github.com/shyamagu/horizontal-chatgpt)**
+
 This is a horizontal version of ChatGPT deployed on Azure StaticWebApps using Azure OpenAI Services. Unlike the traditional vertical ChatGPT, this version offers a different approach to conversational AI.
 
 ## Usage
