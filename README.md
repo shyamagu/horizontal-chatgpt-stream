@@ -14,7 +14,7 @@ Using Horizontal ChatGPT is simple. You only need to provide the following initi
 
 ## Deployment
 
-The Horizontal ChatGPT is deployed on Azure StaticWebApps and can be accessed using the following URL: [https://salmon-beach-093e71f00.3.azurestaticapps.net/](https://salmon-beach-093e71f00.3.azurestaticapps.net/).
+The Horizontal ChatGPT is deployed on Azure StaticWebApps and can be accessed using the following URL: [https://lively-water-01c9a5200.5.azurestaticapps.net/](https://lively-water-01c9a5200.5.azurestaticapps.net/).
 
 ## Functionality
 
