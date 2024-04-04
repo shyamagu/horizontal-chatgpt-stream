@@ -19,7 +19,11 @@
 <div class="prompt_box">
 <div class="prompt_field_box">
     <textarea class="prompt_field" class:executed={executed || loading} bind:value={systemPrompt} placeholder="Enter system prompt here..."></textarea>
-    <textarea class="prompt_field user_prompt_filed" class:executed={executed || loading} bind:value={userPrompt} placeholder="Enter user prompt here..."></textarea>
+    {#if !executed}
+        <textarea class="prompt_field user_prompt_filed" bind:value={userPrompt} placeholder="Enter user prompt here..."></textarea>
+    {:else}
+        <textarea class="prompt_field user_prompt_filed executed" bind:value={userPrompt} placeholder="Enter user prompt here..." readonly></textarea>
+    {/if}
     <div class="token_message">
         {tokenMessage}
     </div>
@@ -125,7 +129,6 @@
 .executed {
     background-color: #eee;
     resize: none;
-    pointer-events: none;
 }
 
 .token_message{
