@@ -121,13 +121,18 @@
     async function delayAndNewContent(content) {
 
     const contentArr = Array.from(content);
-    // 1文字ずつ表示(Function(node)+Svelteの場合のみ1文字単位でループしないとうまくフラッシュされない)
-    for(const one of contentArr){
-        await new Promise(resolve => setTimeout(() => {
-            user_prompts[count-1] += one;
-            resolve(null);
-        }, 33));
-    }
+// 1文字ずつ表示(Function(node)+Svelteの場合のみ1文字単位でループしないとうまくフラッシュされない)
+//    for(const one of contentArr){
+//        await new Promise(resolve => setTimeout(() => {
+//            user_prompts[count-1] += one;
+//            resolve(null);
+//        }, 33));
+//    }
+
+    await new Promise(resolve => setTimeout(() => {
+        user_prompts[count-1] += content;
+        resolve(null);
+    }, 100));
 
     }
 
