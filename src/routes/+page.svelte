@@ -132,7 +132,7 @@
     await new Promise(resolve => setTimeout(() => {
         user_prompts[count-1] += content;
         resolve(null);
-    }, 100));
+    }, 33));
 
     }
 
